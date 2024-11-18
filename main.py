@@ -6,7 +6,7 @@ from aiogram.dispatcher.filters import Text
 from aiogram.utils import executor
 
 # Создаем бота
-API_TOKEN = '7291151009:AAErK9lsTQI4STWpDktntJnXHDDkHUzqChM'
+API_TOKEN = ''
 bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)

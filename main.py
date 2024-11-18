@@ -5,7 +5,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 from aiogram.dispatcher.filters import Text
 from aiogram.utils import executor
 
-# Создаем бота
+
 API_TOKEN = ''
 bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
@@ -19,7 +19,7 @@ class UserState(StatesGroup):
     weight = State()
 
 
-# Обработчик команды /start
+
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
     await message.answer(
@@ -79,6 +79,5 @@ async def all_messages(message: types.Message):
     await message.answer("Введите команду /start, чтобы начать общение.")
 
 
-# Запуск бота
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
